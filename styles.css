@@ -1,0 +1,167 @@
+/*
+COMP 220 - PHP Programming
+Taylor Evans - 4373570
+File: styles.css
+Purpose: Stylesheet for the event poster form and generated poster. Defines 
+         layout, form inputs, poster image styling, and responsive design.
+*/
+
+/* General body and container styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FDF0D5; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Styling */
+.event-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #780000; 
+}
+
+.event-form h2 {
+    color: #003049; 
+    font-size: 32px;
+}
+
+.event-form label {
+    font-size: 18px;
+    color: #003049; 
+}
+
+.event-form input[type="text"],
+.event-form input[type="date"],
+.event-form input[type="file"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #C1121F; 
+    border-radius: 5px;
+    display: block; 
+}
+
+/* Styling the color picker input field */
+.event-form input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #C1121F;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: transparent; 
+}
+
+/* Font Preview Styling */
+#font_preview {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003049;
+    text-align: center;
+    padding: 10px;
+}
+.event-form button {
+    background-color: #C1121F; 
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.event-form button:hover {
+    background-color: #780000; 
+}
+
+/* Poster Styling */
+.poster-container {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 50%; 
+    background-color: #003049; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poster-container h1 {
+    color: #FDF0D5; 
+    font-size: 36px;
+}
+
+.poster-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #C1121F; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Success and error messages */
+.success-message {
+    background-color: #669BBC; 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #C1121F; 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Poster image styling */
+.poster-image {
+    max-width: 100%;
+    height: auto; 
+    width: auto;  
+    max-height: 70vh; 
+    border: 4px solid #C1121F; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure poster image fits well on mobile */
+@media screen and (max-width: 768px) {
+    .event-form {
+        width: 90%;
+    }
+    .poster-container {
+        width: 95%;
+    }
+    .poster-image {
+        max-width: 95%;
+        max-height: 60vh;
+    }
+}
+
+/* Font style adjustments for font selection */
+.event-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #C1121F;
+    border-radius: 5px;
+    display: block;
+}

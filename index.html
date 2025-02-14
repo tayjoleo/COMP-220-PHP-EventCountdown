@@ -1,0 +1,50 @@
+<!--
+    COMP 220 - PHP Programming
+    Taylor Evans - 4373570
+    File: index.html
+    Purpose: HTML form to collect user input for event name, event date, text color,
+    font choice, and background image to generate an event poster.
+    -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Countdown</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <form action="posterOutput.php" method="post" enctype="multipart/form-data" class="event-form">
+        <h2>Create Event Poster</h2>
+
+        <label for="event_name">Event Name:</label>
+        <input type="text" id="event_name" name="event_name" required><br><br>
+
+        <label for="event_date">Event Date:</label>
+        <input type="date" id="event_date" name="event_date" required><br><br>
+
+        <label for="text_color">Text Color:</label>
+        <input type="color" id="text_color" name="text_color" value="#FDF0D5"><br><br>
+
+        <label for="font_choice">Font Choice:</label>
+        <div id="font_preview" style="font-family: 'Lexend', sans-serif; font-size: 20px; color: #003049;">
+            Example Text
+        </div>
+        <select id="font_choice" name="font_choice">
+            <option value="Lexend" style="font-family: 'Lexend', sans-serif;">Lexend</option>
+            <option value="Limelight" style="font-family: 'Limelight', sans-serif;">Limelight</option>
+            <option value="BagelFatOne" style="font-family: 'BagelFatOne', sans-serif;">BagelFatOne</option>
+            <option value="Bokor" style="font-family: 'Bokor', sans-serif;">Bokor</option>
+            <option value="Tiny5" style="font-family: 'Tiny5', sans-serif;">Tiny5</option>
+        </select>
+
+        <label for="background_image">Background Image:</label>
+        <input type="file" id="background_image" name="background_image" accept="image/*"><br><br>
+
+        <button type="submit" class="submit-btn">Generate Poster</button>
+    </form>
+</body>
+</html>
